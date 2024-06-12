@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="h-screen w-screen">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spark</title>
+
+    <style>
+    @font-face {
+      font-family: 'Generalsans Variable';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d363852608873fbc3f4_GeneralSans-Variable.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d363852608873fbc3f0_GeneralSans-Variable.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35759c4491c920c534_GeneralSans-Variable.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35e02b05b13f51f142_GeneralSans-Variable.ttf') format('truetype');
+      font-weight: 200 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35069c17009de4d5ad_GeneralSans-VariableItalic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d349025f3e4748e7be0_GeneralSans-Italic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d359025f3e4748e7e75_GeneralSans-VariableItalic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d343f3fb70ff9484e90_GeneralSans-Italic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35741588aefc9fb039_GeneralSans-VariableItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d349025f3e4748e7bd5_GeneralSans-Italic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3540f35b04cdfb500f_GeneralSans-VariableItalic.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34eead48d3469dc4e6_GeneralSans-Italic.ttf') format('truetype');
+      font-weight: 200 700;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35c6d1f66ac6490853_GeneralSans-SemiboldItalic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35c9076d52963eeae9_GeneralSans-SemiboldItalic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35b1f729afb6beabe3_GeneralSans-SemiboldItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35c1df3be5ee97558a_GeneralSans-SemiboldItalic.ttf') format('truetype');
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d354c0ef83f96797051_GeneralSans-Semibold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35b1f729afb6beabbd_GeneralSans-Semibold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35515fe8ac32527251_GeneralSans-Semibold.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3552d943ac73236574_GeneralSans-Semibold.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35515fe8ac3252722c_GeneralSans-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35e02b05b13f51f0e3_GeneralSans-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35221ce9ae20fff5e7_GeneralSans-Regular.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3540f35b04cdfb4fd7_GeneralSans-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35baacccad714f7559_GeneralSans-MediumItalic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35eead48d3469dc5f6_GeneralSans-MediumItalic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d353f3fb70ff948535e_GeneralSans-MediumItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d356e01da60ab92a9e0_GeneralSans-MediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3552d943ac732364f8_GeneralSans-Medium.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3540f35b04cdfb4f8c_GeneralSans-Medium.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35dc3916e0bb31b874_GeneralSans-Medium.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35515fe8ac325271d4_GeneralSans-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35c1df3be5ee9753e1_GeneralSans-LightItalic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35baacccad714f74ee_GeneralSans-LightItalic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35eead48d3469dc57b_GeneralSans-LightItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35c1df3be5ee9753ba_GeneralSans-LightItalic.ttf') format('truetype');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35ccad483ccb6a37ce_GeneralSans-ExtralightItalic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34741588aefc9faed6_GeneralSans-ExtralightItalic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34c1df3be5ee97526c_GeneralSans-ExtralightItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34741588aefc9faee0_GeneralSans-ExtralightItalic.ttf') format('truetype');
+      font-weight: 200;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34759c4491c920c443_GeneralSans-Light.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d35ccad483ccb6a380f_GeneralSans-Light.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d359025f3e4748e7ce7_GeneralSans-Light.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3440f35b04cdfb4eee_GeneralSans-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34ccad483ccb6a378a_GeneralSans-Extralight.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34c9076d52963ee868_GeneralSans-Extralight.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34779d034a9b2483fe_GeneralSans-Extralight.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3452d943ac73236421_GeneralSans-Extralight.ttf') format('truetype');
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d342324ecc4fbcd487d_GeneralSans-BoldItalic.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d343f3fb70ff9484df6_GeneralSans-BoldItalic.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34baacccad714f73c6_GeneralSans-BoldItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34779d034a9b24833c_GeneralSans-BoldItalic.ttf') format('truetype');
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Generalsans';
+      src: url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34b1f729afb6bea9c8_GeneralSans-Bold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d3452d943ac732363fd_GeneralSans-Bold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d342324ecc4fbcd4848_GeneralSans-Bold.woff') format('woff'), url('https://uploads-ssl.webflow.com/64f92708069c17009ddc8383/64f92d34dc3916e0bb31b60a_GeneralSans-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    * {
+      font-family: Generalsans, sans-serif;
+    }
+    </style>
+  </head>
+  <body id="app" class="min-h-full min-w-full text-base tracking-normal font-medium">
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
