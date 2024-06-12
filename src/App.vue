@@ -3,6 +3,13 @@ import Logo from './assets/logo.svg';
 import Banner from './assets/banner.jpg';
 import Partner1 from './assets/partner1.svg';
 import SideTip from './assets/sideTip.jpg';
+
+const handleScrollTo = (id) => {
+	const element = document.getElementById(id)
+	if (!element) return;
+
+  element.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -11,10 +18,10 @@ import SideTip from './assets/sideTip.jpg';
       <a href="/"><img :src="Logo"></a>
 
       <ul class="flex items-center gap-10 text-sm">
-        <li>About Us</li>
-        <li>Demo</li>
-        <li>Product</li>
-        <li>SparkNotes</li>
+        <li><a href="javascript: void()" @click="handleScrollTo('about-us')">About Us</a></li>
+        <li><a href="javascript: void()" @click="handleScrollTo('demo')">Demo</a></li>
+        <li><a href="javascript: void()" @click="handleScrollTo('product')">Product</a></li>
+        <li><a href="javascript: void()">SparkNotes</a></li>
       </ul>
     </div>
   </header>
@@ -23,7 +30,7 @@ import SideTip from './assets/sideTip.jpg';
     <img :src="Banner" class="block w-full h-[250px]">
 
     <!-- partner -->
-		<section class="bg-[#f4f1ed] w-full py-10 px-10 mb-10">
+		<section class="bg-[#f4f1ed] w-full pt-10 px-10">
 			<div class="flex flex-col items-center">
 				<div>
 					<h2 class="text-4xl">Streamline permitting and interconnection paperwork</h2>
@@ -50,7 +57,7 @@ import SideTip from './assets/sideTip.jpg';
 				</div>
 			</div>
 
-			<div class="flex justify-center items-center mb-12">
+			<div class="flex justify-center items-center py-12" id="demo">
 				<a href="javascript: void(0)" class="inline-block border border-black px-14 py-4 text-2xl bg-white">
 					<span>Book a Demo</span>
 					<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/64fb8787a00228a3a8370e3e_arrow-up-right.svg" class="inline-block ml-5">
@@ -82,7 +89,8 @@ import SideTip from './assets/sideTip.jpg';
 			</div>
 		</section>
 
-		<section class="mb-32 px-16 space-y-14">
+		<!-- product -->
+		<section class="px-16 space-y-14 py-14" id="product">
 			<div class="flex items-center gap-10">
 				<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65f3dfecc1049ec53be4a7e6_screen.png" class="block w-1/2">
 				<div>
@@ -100,7 +108,8 @@ import SideTip from './assets/sideTip.jpg';
 			</div>
 		</section>
 
-		<section class="mb-14">
+		<!-- abount us -->
+		<section class="mb-14 pt-10" id="about-us">
 			<h2 class="text-[#9ba5b7] text-center text-3xl mb-8">Brought to you by leaders in energy and software</h2>
 
 			<div class="flex justify-center items-center gap-28">
