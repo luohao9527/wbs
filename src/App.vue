@@ -1,8 +1,12 @@
 <script setup>
-import Logo from './assets/logo.svg';
-import Banner from './assets/banner.jpg';
+import Logo from './assets/ai/logo.png';
+import Banner from './assets/banner.png';
 import Partner1 from './assets/partner1.svg';
-import SideTip from './assets/sideTip.jpg';
+import SideTip from './assets/sideTip2.webp';
+
+import Avatar1 from './assets/ai/avatar1.png';
+import Avatar2 from './assets/ai/avatar2.png';
+
 
 const handleScrollTo = (id) => {
 	const element = document.getElementById(id)
@@ -15,13 +19,13 @@ const handleScrollTo = (id) => {
 <template>
   <header class="p-5 bg-[#f4f1ed]">
     <div class="flex items-center gap-10 pl-20">
-      <a href="/"><img :src="Logo"></a>
+      <a href="/"><img :src="Logo" width="80"></a>
 
       <ul class="flex items-center gap-10 text-sm">
         <li><a href="javascript: void()" @click="handleScrollTo('about-us')">About Us</a></li>
         <li><a href="javascript: void()" @click="handleScrollTo('demo')">Demo</a></li>
         <li><a href="javascript: void()" @click="handleScrollTo('product')">Product</a></li>
-        <li><a href="javascript: void()">SparkNotes</a></li>
+        <li><a href="javascript: void()">IgniteFlowNotes</a></li>
       </ul>
     </div>
   </header>
@@ -30,16 +34,16 @@ const handleScrollTo = (id) => {
     <img :src="Banner" class="block w-full h-[250px]">
 
     <!-- partner -->
-		<section class="bg-[#f4f1ed] w-full pt-10 px-10">
+		<section class="bg-[#f4f1ed] w-full pt-10 px-32">
 			<div class="flex flex-col items-center">
 				<div>
-					<h2 class="text-4xl">Streamline permitting and interconnection paperwork</h2>
-					<p class="text-4xl text-[#565f6e]">for utility scale solar</p>
+					<h2 class="text-4xl">Revolutionizing Solar Projects with AI.</h2>
+					<p class="text-4xl text-[#565f6e]"> Streamline permitting and interconnection, optimize decisions, and accelerate deployment from start to finish.</p>
 
 					<div class="mt-10 mb-32">
 						<h3 class="text-xl text-[#565f6e]">Trusted by</h3>
 		
-						<div class="flex items-center w-full gap-3">
+						<div class="flex items-center w-full gap-10">
 							<a href="javascript: void(0)" class="block">
 								<img :src="Partner1" class="block w-[200px]">
 							</a>
@@ -66,7 +70,7 @@ const handleScrollTo = (id) => {
 
 			<!-- vedio -->
 			<div class="w-full flex flex-col items-center mb-52">
-				<p class="text-3xl font-normal mb-4">Screen and research thousands of locations in seconds using AI</p>
+				<p class="text-3xl font-normal mb-4">AI rapidly screens locations, expediting decision-making with remarkable efficiency</p>
 				<video src="https://cdn.loom.com/sessions/thumbnails/6790e7c19cb54978b01754682c46d79b-00001.mp4" playsinline="" loop="" autoplay="" poster="https://cdn.loom.com/sessions/thumbnails/6790e7c19cb54978b01754682c46d79b-00001.jpg" class="w-[800px]"></video>
 			</div>
 
@@ -75,34 +79,34 @@ const handleScrollTo = (id) => {
 					<img :src="SideTip" class="block w-full">
 				</div>
 				<div class="flex items-start pt-6 gap-5 border-t border-black">
-					<h3 class="text-[#b87005] w-[180px] flex-shrink-0">Selection</h3>
-					<p class="flex-grow">Assess prospects <span class="text-[#545f71]">and identify fatal flaws early</span></p>
+					<h3 class="text-[#b87005] w-[180px] flex-shrink-0">Prospect</h3>
+					<p class="flex-grow">Early prospect assessment <span class="text-[#545f71]">detecting fatal flaws.</span></p>
 				</div>
 				<div class="flex items-start pt-6 gap-5 border-t border-black">
-					<h3 class="text-[#0085ff] w-[180px] flex-shrink-0">Requirements</h3>
-					<p class="flex-grow">Generate regional checklists <span class="text-[#545f71]">and get a constant feed of refreshed data on interconnection and permitting requirements</span></p>
+					<h3 class="text-[#0085ff] w-[180px] flex-shrink-0">Checklists</h3>
+					<p class="flex-grow">Produce regional checklists <span class="text-[#545f71]">receive real-time updates on interconnection and permitting criteria</span></p>
 				</div>
 				<div class="flex items-start pt-6 gap-5 border-t border-black">
-					<h3 class="text-[#d30f0f] w-[180px] flex-shrink-0">Workflows</h3>
-					<p class="flex-grow">Powered by your project's content, <span class="text-[#545f71]">Spark automates time-consuming processes from origination to handoff</span></p>
+					<h3 class="text-[#d30f0f] w-[180px] flex-shrink-0">Streamlines</h3>
+					<p class="flex-grow">Driven by project data, <span class="text-[#545f71]">IgniteFlow streamlines processes from start to transfer</span></p>
 				</div>
 			</div>
 		</section>
 
 		<!-- product -->
-		<section class="px-16 space-y-14 py-14" id="product">
+		<section class="px-32 space-y-14 py-14" id="product">
 			<div class="flex items-center gap-10">
 				<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65f3dfecc1049ec53be4a7e6_screen.png" class="block w-1/2">
 				<div>
-					<h3 class="text-3xl mb-4">Site screening</h3>
-					<p class="text-[#414448] text-3xl">Location-specific data at your fingertips. Identify the best sites in seconds, not weeks.</p>
+					<h3 class="text-3xl mb-4">Instant Data Access</h3>
+					<p class="text-[#414448] text-3xl">Experience the immediacy of our platform as it delivers comprehensive location data, enabling swift and informed site assessments.</p>
 				</div>
 			</div>
 
 			<div class="flex items-center gap-10">
 				<div>
-					<h3 class="text-3xl mb-4">SolarGPT</h3>
-					<p class="text-[#414448] text-3xl">Get detailed answers to your policy, utility, and development-related questions.</p>
+					<h3 class="text-3xl mb-4">Advanced Analytics</h3>
+					<p class="text-[#414448] text-3xl">Leverage our sophisticated analytical tools designed to dissect and evaluate site suitability, ensuring that your project's criteria are met with precision.</p>
 				</div>
 				<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65f3dfecee0dd6cd73c894d4_gpt.png" class="block w-1/2">
 			</div>
@@ -123,8 +127,8 @@ const handleScrollTo = (id) => {
 		<section class="flex items-stretch gap-20 px-20 mb-16">
 			<div>
 				<div class="text-center space-y-2 mb-2">
-					<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65ee0c08e4b6ab313a92b536_501f44c67d39cc1704ab75dc29ae432b76a7c8f6.jpg" loading="lazy" class="inline-block rounded-full max-w-full">
-					<h3 class="text-2xl">Julia Wu</h3>
+					<img :src="Avatar2" loading="lazy" class="w-[200px] h-[200px] inline-block rounded-full max-w-full border border-light-700">
+					<h3 class="text-2xl">Isabel Montgomery</h3>
 					<p class="text-[#9ba5b7] text-xl">Co-Founder and CEO</p>
 					<a href="javascript: void(0)" class="inline-block">
 						<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65ef6dfe395000ee4542399e_linkedin-icon.webp" width="32">
@@ -132,17 +136,17 @@ const handleScrollTo = (id) => {
 				</div>
 
 				<div class="text-xl font-normal space-y-6">
-					<p>Julia was one of the youngest engineering managers at Brex, worked as an engineer in Apple's AI/ML division, and built infrastructure at Microsoft.
+					<p>At Brex, Isabel distinguished herself as one of the youngest engineering managers, overseeing a team that developed innovative financial software solutions. Her tenure at Apple's AI/ML division further honed her skills, where she contributed to the development of sophisticated machine learning algorithms.
 					</p>
-					<p>Within months of joining the energy sector, Julia developed tools such as chatbots and data catalogs for the clean energy industry, which have been used by hundreds of solar developers, and wrote articles about project finance, tax credits, and AI use cases that went viral among industry leaders.</p>
-					<p>Julia holds a Bachelor of Science in Computer Science and Economics from Brown. </p>
+					<p>During her time at Microsoft, Isabel was instrumental in building and scaling the company's cloud infrastructure, which now supports millions of users worldwide.</p>
+					<p>Isabel holds a Bachelor of Science in Computer Science and Economics from the University of Cambridge, where her academic achievements were nothing short of stellar. </p>
 				</div>
 			</div>
 
 			<div>
 				<div class="text-center space-y-2 mb-2">
-					<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65ee0e2d393fa97ca78e405d_3d79749263f05dcff32a105d493e9aeafe096c6f.jpg" loading="lazy" class="inline-block rounded-full max-w-full">
-					<h3 class="text-2xl">Tae Kim</h3>
+					<img :src="Avatar1" loading="lazy" class="w-[200px] h-[200px] inline-block rounded-full max-w-full border border-light-700">
+					<h3 class="text-2xl">Henry Sinclair</h3>
 					<p class="text-[#9ba5b7] text-xl">Co-Founder and CTO</p>
 					<a href="javascript: void(0)" class="inline-block">
 						<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/65ef6dfe395000ee4542399e_linkedin-icon.webp" width="32">
@@ -150,9 +154,12 @@ const handleScrollTo = (id) => {
 				</div>
 
 				<div class="text-xl font-normal space-y-6">
-					<p>Tae led the development of Tesla's warehouse software from scratch, managing systems that handled $xxMM in daily inventory and supported a factory producing 7k cars per week. He also played a key role in creating Lucid's payment platform from the ground up, pioneering online vehicle sales and processing millions of dollars in transactions monthly.
+					<p>Henry was at the helm of developing Tesla's state-of-the-art warehouse management software from the ground up. His leadership ensured the seamless handling of multi-million-dollar daily inventories, supporting a production line that churned out thousands of electric vehicles weekly.
 					</p>
-					<p>Tae holds a degree in Industrial Engineering from Georgia Tech.</p>
+					<p>
+						Henry's expertise in industrial engineering and software development has been instrumental in creating user-friendly and secure e-commerce solutions that have transformed the way consumers purchase high-value items, such as vehicles, online.
+					</p>
+					<p>Henry holds a degree in Industrial Engineering from the University of Cambridge, where he graduated with honors and was recognized for his innovative approach to systems optimization and automation.</p>
 				</div>
 			</div>
 		</section>
@@ -163,7 +170,7 @@ const handleScrollTo = (id) => {
 				<div class="flex items-start gap-14 border-t border-black pt-4">
 					<span class="text-[#9ba5b7] text-2xl mt-1">Demo</span>
 					<div class="space-y-10">
-						<h3 class="text-[40px]">See Spark in action</h3>
+						<h3 class="text-[40px]">See IgniteFlow in action</h3>
 						<p class="text-[#545f71] text-2xl">We’d love to hear about your plans and show you the power of our platform.</p>
 						<a href="javascript: void(0)" class="inline-block border border-black px-10 py-4 text-2xl bg-white">
 							<span>Get In Touch</span>
@@ -175,9 +182,9 @@ const handleScrollTo = (id) => {
 			<img :src="SideTip" class="block w-full">
 		</div>
 
-		<div class="flex justify-between items-center bg-white py-10 px-10">
-			<img src="https://assets-global.website-files.com/64f92708069c17009ddc8383/64f930553f3fb70ff94c3d1e_SparkLogo.svg" width="">
-			<span class="text-[#9ba5b7] text-xs">© Spark Systems, Inc. 2024</span>
+		<div class="flex justify-between items-center bg-white py-5 px-10">
+			<img :src="Logo" width="50">
+			<span class="text-[#9ba5b7] text-xs flex justify-end items-center text-right">© IgniteFlow Systems, Inc. 2024</span>
 		</div>
 	</footer>
 </template>
